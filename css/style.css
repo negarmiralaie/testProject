@@ -44,7 +44,7 @@ main {
 main aside {
     display: flex;
     flex-direction: column;
-    width: 27vw;
+    width: 15vw;
     border-radius: 20px 0 0 20px;
     background-color: blue;
     min-height: 100vh;
@@ -106,8 +106,8 @@ main aside ul li b:nth-child(2)::before {
 
 main aside ul li img {
     width: 5vw;
-    padding-left: 1.2vw;
-    padding-right: 1vw;
+    margin-left: auto;
+    margin-right: auto;
     filter: brightness(0) invert(1);
 }
 
@@ -116,9 +116,13 @@ main aside ul li:first-child {
 }
 
 main aside ul li:first-child img {
-    width: 15%;
+    width: 30%;
 }
 
+main aside ul li p,
+main aside h1 {
+    display: none;
+}
 
 main aside ul li:first-child {
     padding-bottom: 2rem;
@@ -132,7 +136,6 @@ main aside ul li:first-child {
 }
 
 main aside .excerciseCard {
-    display: flex;
     flex-direction: column;
     text-align: center;
     background-color: white;
@@ -141,6 +144,7 @@ main aside .excerciseCard {
     padding: 1rem;
     width: 70%;
     height: 70%;
+    display: none;
 }
 
 main aside .excerciseCard i {
@@ -153,16 +157,15 @@ main aside .excerciseCard img {
     margin: 2rem auto;
 }
 
-.contentSec{
+.contentSec {
     display: flex;
 }
 
-.counter{
+.counter {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    flex-direction: column;
-    width: 70vw;
+    width: 81vw;
 }
 
 .counter table {
@@ -177,46 +180,41 @@ main aside .excerciseCard img {
     padding: .4rem .4rem .4rem 0;
 }
 
-.counterChild{
+.counterChild {
     margin-left: auto;
     margin-right: auto;
 }
 
-.counter table tbo:nth-of-type(1){
-    background-color: blue;
-    margin-left: auto;
-}
-
-.counter table td{
-    text-align: center; 
-}
-
-.counter table td img:nth-child(1){
-    display: flex;
-    padding-right: .4rem;
+.counter table td {
+    text-align: center;
 }
 
 .counter table td img {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     border-right: 2px solid #a3a3a3;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .counter table tr td:nth-child(n+1) {
-    padding: 0 .5rem;
+    /* padding: 0 2.5rem; */
 }
 
 .counter table tr td:nth-child(n+2) {
     vertical-align: bottom;
     font-weight: bold;
     color: rgb(175, 36, 36);
-    font-size: 6em;
+    font-size: 3em;
+    width: 50%;
 }
 
 #bottomText {
     vertical-align: top;
-    color: rgb(20, 54, 6);
-    font-size: 3em;
+    color: rgb(86, 175, 51);
+    font-size: 2em;
+    width: 50%;
 }
 
 @media only screen and (min-width: 600px) {
@@ -237,7 +235,38 @@ main aside .excerciseCard img {
         margin-left: 1rem;
     }
 
-    .counter{
-        flex-direction: row;
+    main aside .excerciseCard {
+        display: flex;
+    }
+
+    main aside ul li p,
+    main aside h1 {
+        display: flex;
+    }
+
+    main aside {
+        width: 25vw;
+    }
+
+    main aside ul li img {
+        padding-left: 1.2vw;
+        padding-right: 1vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .counter table tr td:nth-child(n+2) {
+        font-size: 6em;
+    }
+
+    #bottomText {
+        font-size: 2em;
+    }
+
+    .counter table td img {
+        width: 60%;
+        height: 60%;
+        margin-left: auto;
+        text-align: center;
     }
 }
