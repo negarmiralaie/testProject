@@ -47,6 +47,8 @@ main aside {
     flex-direction: column;
     width: 30vw;
     border-radius: 20px 0 0 20px;
+    background-color: blue;
+    min-height: 100vh;
     /* background-image: linear-gradient(#2C4EA7, #122C6D); */
 }
 
@@ -129,6 +131,28 @@ main aside ul li:first-child{
     background-color: gray;
     color: black;
     border-radius: 100px 0 0 100px;
+}
+
+main aside .excerciseCard{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    margin: auto auto 2rem auto;
+    border-radius: 20px;
+    padding: 1rem;
+    width: 30vh;
+    height: 30vh;
+}
+
+main aside .excerciseCard i{
+    margin-left: auto;
+}
+
+main aside .excerciseCard img{
+    width: 70%;
+    height: 70%;
+    margin: 2rem auto;
 }
 
 @media only screen and (min-width: 600px) {
