@@ -38,18 +38,15 @@ nav img {
 
 main {
     margin: 1rem;
-    /* display: flex;
-    flex-direction: column; */
 }
 
 main aside {
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    width: 27vw;
     border-radius: 20px 0 0 20px;
     background-color: blue;
     min-height: 100vh;
-    /* background-image: linear-gradient(#2C4EA7, #122C6D); */
 }
 
 main aside ul {
@@ -118,7 +115,7 @@ main aside ul li:first-child {
 }
 
 main aside ul li:first-child img {
-    width: 20%;
+    width: 15%;
 }
 
 
@@ -141,8 +138,8 @@ main aside .excerciseCard{
     margin: auto auto 2rem auto;
     border-radius: 20px;
     padding: 1rem;
-    width: 30vh;
-    height: 30vh;
+    width: 70%;
+    height: 70%;
 }
 
 main aside .excerciseCard i{
