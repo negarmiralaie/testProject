@@ -222,7 +222,7 @@ main .todayStatus{
     background-color: white;
     padding: 1.5rem;
     border-radius: 20px;
-    width: 75vw;
+    /* width: 75vw; */
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
@@ -339,7 +339,4 @@ main .topContentSec .todayStatus .filthyTable .todayWod {
         font-size: .8em;
     }
 
-    main .todayStatus{
-        width: 30vw;
-    }
 }
