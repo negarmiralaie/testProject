@@ -1,5 +1,12 @@
+:root {
+    --myBlue: #122C6D;
+    --myDarkPink: #E6514B;
+    --myLigtPink: #EEA3A0;
+    --myGray: #EEF0F6;
+}
+
 body {
-    background-color: gray;
+    background-color: var(--myGray);
 }
 
 * {
@@ -46,14 +53,14 @@ main aside {
     flex-direction: column;
     width: 15vw;
     border-radius: 20px 0 0 20px;
-    background-color: blue;
+    background-color: var(--myBlue);
     min-height: 100vh;
 }
 
 main aside ul {
     list-style: none;
     color: white;
-    background-color: blue;
+    background-color: var(--myBlue);
     border-radius: 20px 0 0 20px;
 }
 
@@ -71,7 +78,7 @@ main aside ul li b:nth-child(1) {
     top: -20px;
     height: 20px;
     width: 100%;
-    background-color: gray;
+    background-color: var(--myGray);
 }
 
 main aside ul li b:nth-child(1)::before {
@@ -82,7 +89,7 @@ main aside ul li b:nth-child(1)::before {
     width: 100%;
     height: 100%;
     border-bottom-right-radius: 20px;
-    background-color: blue;
+    background-color: var(--myBlue);
 }
 
 main aside ul li b:nth-child(2) {
@@ -90,7 +97,7 @@ main aside ul li b:nth-child(2) {
     bottom: -20px;
     height: 20px;
     width: 100%;
-    background-color: gray;
+    background-color: var(--myGray);
 }
 
 main aside ul li b:nth-child(2)::before {
@@ -101,7 +108,7 @@ main aside ul li b:nth-child(2)::before {
     width: 100%;
     height: 100%;
     border-top-right-radius: 20px;
-    background-color: blue;
+    background-color: var(--myBlue);
 }
 
 main aside ul li img {
@@ -130,7 +137,7 @@ main aside ul li:first-child {
 }
 
 .activeAside {
-    background-color: gray;
+    background-color: var(--myGray);
     color: black;
     border-radius: 100px 0 0 100px;
 }
@@ -206,7 +213,7 @@ main aside .excerciseCard img {
 .counter table tr td:nth-child(n+2) {
     vertical-align: bottom;
     font-weight: bold;
-    color: rgb(175, 36, 36);
+    color: var(--myDarkPink);
     font-size: 3em;
     width: 50%;
 }
@@ -218,11 +225,11 @@ main aside .excerciseCard img {
     width: 50%;
 }
 
-main .todayStatus{
+main .todayStatus {
     background-color: white;
     padding: 1.5rem;
     border-radius: 20px;
-    /* width: 75vw; */
+    width: 75vw;
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
@@ -240,36 +247,49 @@ main .todayStatus table {
     margin-left: auto;
 }
 
+main .todayStatus table:nth-child(2) {
+    /* display: flex; */
+    /* margin-left: 0; */
+    /* margin-right: 0; */
+    /* background-color: brown; */
+}
+
+main .todayStatus table:nth-child(2) td:nth-child(3) {
+    /* background-color: aqua; */
+    /* margin-right: auto; */
+    /* margin-left: auto; */
+}
+
 main .todayStatus table td {
-    background-color: gray;
+    background-color: var(--myGray);
     border-radius: 10px 10px 0 0;
     vertical-align: text-bottom;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: .2rem;
+    padding-left: .2rem;
 }
 
 main .todayStatus table tr:nth-child(2n) td:nth-child(2n),
 main .todayStatus table tr:nth-child(2n) td:nth-child(2n+1) {
     border-radius: 0 0 10px 10px;
     padding-bottom: 1.2rem;
-    font-size: .5em;
+    font-size: .3em;
 }
 
 main .todayStatus table tr:nth-child(2n+1) td:nth-child(2n+1),
 main .todayStatus table tr:nth-child(2n+1) td:nth-child(2n) {
     padding-top: 1.2rem;
-    color: blue;
+    color: var(--myBlue);
     font-weight: bold;
 }
 
 .filthyTable {
-    background-color: gray;
+    background-color: var(--myGray);
     border-radius: 10px;
     display: flex;
-    border: solid 20px red;
-    border-right: gray;
-    border-top: gray;
-    border-bottom: gray;
+    border: solid 20px var(--myDarkPink);
+    border-right: var(--myGray);
+    border-top: var(--myGray);
+    border-bottom: var(--myGray);
     width: 80%;
 }
 
@@ -281,7 +301,87 @@ main .topContentSec .todayStatus .filthyTable .todayWod {
     color: black;
 }
 
-@media only screen and (min-width: 600px) {
+main .statisticsSec {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+main .graphHeadings {
+    display: flex;
+}
+
+main .graphHeadings h4{
+    color: gray;
+}
+
+main .graphHeadings h4 {
+    margin-left: auto;
+}
+
+main .rightLeftGraphParts {
+    display: flex;
+}
+
+main .statisticsSec .leftStatic {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+main .statisticsSec .leftStatic section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1rem 0;
+    margin-left: 1.5rem;
+}
+
+main .statisticsSec .leftStatic section p{
+    color: gray;
+}
+
+main .statisticsSec .leftStatic section:before {
+    content: '■';
+    display: inline-block;
+    color: var(--myDarkPink);
+    position: absolute;
+    font-size: 2em;
+    left: -30%;
+    bottom: 35%;
+    background: url(../images/search\ .png);
+    border-radius: 200px;
+}
+
+main .statisticsSec .leftStatic section:nth-child(3)::before {
+    color: var(--myDarkPink);
+}
+
+main .statisticsSec .leftStatic section:nth-child(4)::before {
+    color: var(--myLigtPink);
+}
+
+main .statisticsSec .rightStatic {
+    margin-top: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-top: auto;
+    width: 50%;
+}
+
+main .statisticsSec .rightStatic svg {
+    width: 80%;
+    height: 80%;
+}
+
+
+@media only screen and (min-width: 1024px) {
 
     nav {
         flex-direction: row;
@@ -334,9 +434,29 @@ main .topContentSec .todayStatus .filthyTable .todayWod {
         text-align: center;
     }
 
+    main .todayStatus {
+        width: 34vw;
+    }
+
     main .todayStatus table tr:nth-child(2n) td:nth-child(2n),
     main .todayStatus table tr:nth-child(2n) td:nth-child(2n+1) {
         font-size: .8em;
     }
 
+    main .todayStatus table td {
+        padding-right: .8rem;
+        padding-left: .8rem;
+    }
+
+    main .statisticsSec {
+        width: 34vw;
+    }
+
+    main .rightLeftGraphParts {
+        flex-direction: row;
+    }
+
+    .secondTopSec {
+        display: flex;
+    }
 }
