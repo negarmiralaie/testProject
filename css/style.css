@@ -1,0 +1,58 @@
+body {
+    background-color: gray;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    margin: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    padding: .3rem .3rem;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+nav input[type=search] {
+    border: solid;
+    padding: .5rem 0 .5rem 2rem;
+    border-radius: 10px;
+    background: url(../images/search\ .png) no-repeat .7rem .5rem;
+    background-size: 1rem;
+    margin: .5rem 0;
+}
+
+nav img {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+@media only screen and (min-width: 600px) {
+
+    nav {
+        flex-direction: row;
+    }
+
+    nav input[type=search] {
+        margin-left: auto;
+    }
+
+    nav h2 {
+        margin: 0 auto 0 0;
+    }
+
+    nav img {
+        margin-left: 1rem;
+    }
+
+}
+
