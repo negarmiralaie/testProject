@@ -36,6 +36,101 @@ nav img {
     height: 1.7rem;
 }
 
+main {
+    margin: 1rem;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+main aside {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    border-radius: 20px 0 0 20px;
+    /* background-image: linear-gradient(#2C4EA7, #122C6D); */
+}
+
+main aside ul {
+    list-style: none;
+    color: white;
+    background-color:  blue;
+    border-radius: 20px 0 0 20px;
+}
+
+main aside ul li {
+    display: flex;
+    align-items: center;
+    padding: .5rem 0;
+    margin-left: 1rem;
+    position: relative;
+    padding: 1rem 0;
+}
+
+main aside ul li b:nth-child(1){
+    position: absolute;
+    top: -20px;
+    height: 20px;
+    width: 100%;
+    background-color: gray;
+}
+
+main aside ul li b:nth-child(1)::before{
+    content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     border-bottom-right-radius: 20px;
+     background-color: blue;
+}
+
+main aside ul li b:nth-child(2){
+    position: absolute;
+    bottom: -20px;
+    height: 20px;
+    width: 100%;
+    background-color: gray;
+}
+
+main aside ul li b:nth-child(2)::before{
+    content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     border-top-right-radius: 20px;
+     background-color: blue;
+}
+
+main aside ul li img {
+    width: 5vw;
+    padding-left: 1.2vw;
+    padding-right: 1vw;
+    filter: brightness(0) invert(1);
+}
+
+main aside ul li:first-child {
+    align-items: flex-end;
+}
+
+main aside ul li:first-child img {
+    width: 20%;
+}
+
+
+main aside ul li:first-child{
+    padding-bottom: 2rem;
+    border-radius: 0 0 20px 0;
+}
+
+.activeAside{
+    background-color: gray;
+    color: black;
+    border-radius: 100px 0 0 100px;
+}
+
 @media only screen and (min-width: 600px) {
 
     nav {
