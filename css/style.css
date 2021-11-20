@@ -164,6 +164,11 @@ main aside .excerciseCard img {
     margin: 2rem auto;
 }
 
+main .mainContent {
+    display: flex;
+    flex-direction: column;
+}
+
 .topContentSec {
     display: flex;
     flex-direction: column;
@@ -317,7 +322,7 @@ main .graphHeadings {
     display: flex;
 }
 
-main .graphHeadings h4{
+main .graphHeadings h4 {
     color: gray;
 }
 
@@ -329,13 +334,15 @@ main .rightLeftGraphParts {
     display: flex;
 }
 
-main .statisticsSec .leftStatic {
+main .statisticsSec .leftStatic,
+.CircleGraphSec section {
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
 }
 
-main .statisticsSec .leftStatic section {
+main .statisticsSec .leftStatic section,
+.CircleGraphSec section {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -343,11 +350,15 @@ main .statisticsSec .leftStatic section {
     margin-left: 1.5rem;
 }
 
-main .statisticsSec .leftStatic section p{
+.CircleGraphSec section {}
+
+main .statisticsSec .leftStatic section p,
+.CircleGraphSec section p {
     color: gray;
 }
 
-main .statisticsSec .leftStatic section:before {
+main .statisticsSec .leftStatic section:before,
+.CircleGraphSec .leftCircleGraph section:before {
     content: '■';
     display: inline-block;
     color: var(--myDarkPink);
@@ -355,31 +366,80 @@ main .statisticsSec .leftStatic section:before {
     font-size: 2em;
     left: -30%;
     bottom: 35%;
-    background: url(../images/search\ .png);
     border-radius: 200px;
 }
 
-main .statisticsSec .leftStatic section:nth-child(3)::before {
-    color: var(--myDarkPink);
-}
+/* .CircleGraphSec .leftCircleGraph section:before {
+    left: -30%;
+} */
 
-main .statisticsSec .leftStatic section:nth-child(4)::before {
+main .statisticsSec .leftStatic section:nth-child(3)::before,
+.CircleGraphSec section:nth-child(3):before
+{
     color: var(--myLigtPink);
 }
 
-main .statisticsSec .rightStatic {
+main .statisticsSec .leftStatic section:nth-child(2)::before,
+.CircleGraphSec section:nth-child(2):before {
+    color: var(--myBlue);
+}
+
+main .statisticsSec .rightStatic,
+.rightCircleGraph {
     margin-top: auto;
     width: 100%;
     margin-left: auto;
-    margin-top: auto;
-    width: 50%;
+    width: 60%;
 }
 
-main .statisticsSec .rightStatic svg {
+main .statisticsSec .rightStatic svg,
+.rightCircleGraph svg {
     width: 80%;
     height: 80%;
 }
 
+.rightCircleGraph {
+    margin-left: auto;
+}
+
+.rightCircleGraph svg {
+    margin: 0 0 auto auto;
+    width: 60%;
+    height: 60%;
+}
+
+main .bottomContentSec {
+    display: flex;
+}
+
+main .CircleGraphContent {
+    display: flex;
+    flex-direction: row;
+}
+
+main .CircleGraphSec {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+main .topPerformerSec {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
 
 @media only screen and (min-width: 1024px) {
 
@@ -458,5 +518,30 @@ main .statisticsSec .rightStatic svg {
 
     .secondTopSec {
         display: flex;
+    }
+
+    main .bottomContentSec {
+        flex-direction: row;
+    }
+
+    main .bottomContentSec {
+        flex-direction: row;
+    }
+
+    main .CircleGraphSec {
+        width: 34vw;
+    }
+
+    main .topPerformerSec {
+        width: 34vw;
+    }
+
+    main .rightCircleGraph {
+        /* width: 50%; */
+    }
+
+    .rightCircleGraph svg {
+        width: 80%;
+        height: 80%;
     }
 }
