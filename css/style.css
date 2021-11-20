@@ -338,4 +338,8 @@ main .topContentSec .todayStatus .filthyTable .todayWod {
     main .todayStatus table tr:nth-child(2n) td:nth-child(2n+1) {
         font-size: .8em;
     }
+
+    main .todayStatus{
+        width: 30vw;
+    }
 }
