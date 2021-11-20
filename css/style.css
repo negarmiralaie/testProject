@@ -38,6 +38,7 @@ nav img {
 
 main {
     margin: 1rem;
+    display: flex;
 }
 
 main aside {
@@ -52,7 +53,7 @@ main aside {
 main aside ul {
     list-style: none;
     color: white;
-    background-color:  blue;
+    background-color: blue;
     border-radius: 20px 0 0 20px;
 }
 
@@ -65,7 +66,7 @@ main aside ul li {
     padding: 1rem 0;
 }
 
-main aside ul li b:nth-child(1){
+main aside ul li b:nth-child(1) {
     position: absolute;
     top: -20px;
     height: 20px;
@@ -73,18 +74,18 @@ main aside ul li b:nth-child(1){
     background-color: gray;
 }
 
-main aside ul li b:nth-child(1)::before{
+main aside ul li b:nth-child(1)::before {
     content: '';
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     border-bottom-right-radius: 20px;
-     background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    background-color: blue;
 }
 
-main aside ul li b:nth-child(2){
+main aside ul li b:nth-child(2) {
     position: absolute;
     bottom: -20px;
     height: 20px;
@@ -92,15 +93,15 @@ main aside ul li b:nth-child(2){
     background-color: gray;
 }
 
-main aside ul li b:nth-child(2)::before{
+main aside ul li b:nth-child(2)::before {
     content: '';
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     border-top-right-radius: 20px;
-     background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    background-color: blue;
 }
 
 main aside ul li img {
@@ -119,18 +120,18 @@ main aside ul li:first-child img {
 }
 
 
-main aside ul li:first-child{
+main aside ul li:first-child {
     padding-bottom: 2rem;
     border-radius: 0 0 20px 0;
 }
 
-.activeAside{
+.activeAside {
     background-color: gray;
     color: black;
     border-radius: 100px 0 0 100px;
 }
 
-main aside .excerciseCard{
+main aside .excerciseCard {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -142,14 +143,80 @@ main aside .excerciseCard{
     height: 70%;
 }
 
-main aside .excerciseCard i{
+main aside .excerciseCard i {
     margin-left: auto;
 }
 
-main aside .excerciseCard img{
+main aside .excerciseCard img {
     width: 70%;
     height: 70%;
     margin: 2rem auto;
+}
+
+.contentSec{
+    display: flex;
+}
+
+.counter{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    width: 70vw;
+}
+
+.counter table {
+    width: 20vw;
+    border-collapse: separate;
+    border-spacing: 0px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: .3em;
+    margin-top: 1rem;
+    background-color: white;
+    padding: .4rem .4rem .4rem 0;
+}
+
+.counterChild{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.counter table tbo:nth-of-type(1){
+    background-color: blue;
+    margin-left: auto;
+}
+
+.counter table td{
+    text-align: center; 
+}
+
+.counter table td img:nth-child(1){
+    display: flex;
+    padding-right: .4rem;
+}
+
+.counter table td img {
+    width: 80%;
+    height: 80%;
+    border-right: 2px solid #a3a3a3;
+}
+
+.counter table tr td:nth-child(n+1) {
+    padding: 0 .5rem;
+}
+
+.counter table tr td:nth-child(n+2) {
+    vertical-align: bottom;
+    font-weight: bold;
+    color: rgb(175, 36, 36);
+    font-size: 6em;
+}
+
+#bottomText {
+    vertical-align: top;
+    color: rgb(20, 54, 6);
+    font-size: 3em;
 }
 
 @media only screen and (min-width: 600px) {
@@ -170,5 +237,7 @@ main aside .excerciseCard img{
         margin-left: 1rem;
     }
 
+    .counter{
+        flex-direction: row;
+    }
 }
-
