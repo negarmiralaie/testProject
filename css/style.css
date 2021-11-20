@@ -157,8 +157,9 @@ main aside .excerciseCard img {
     margin: 2rem auto;
 }
 
-.contentSec {
+.topContentSec {
     display: flex;
+    flex-direction: column;
 }
 
 .counter {
@@ -217,6 +218,69 @@ main aside .excerciseCard img {
     width: 50%;
 }
 
+main .todayStatus{
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    width: 75vw;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main .todayStatus table {
+    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 2rem 0;
+    text-align: center;
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+main .todayStatus table td {
+    background-color: gray;
+    border-radius: 10px 10px 0 0;
+    vertical-align: text-bottom;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+main .todayStatus table tr:nth-child(2n) td:nth-child(2n),
+main .todayStatus table tr:nth-child(2n) td:nth-child(2n+1) {
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 1.2rem;
+    font-size: .5em;
+}
+
+main .todayStatus table tr:nth-child(2n+1) td:nth-child(2n+1),
+main .todayStatus table tr:nth-child(2n+1) td:nth-child(2n) {
+    padding-top: 1.2rem;
+    color: blue;
+    font-weight: bold;
+}
+
+.filthyTable {
+    background-color: gray;
+    border-radius: 10px;
+    display: flex;
+    border: solid 20px red;
+    border-right: gray;
+    border-top: gray;
+    border-bottom: gray;
+    width: 80%;
+}
+
+.filthyTable tr:nth-child(1) td:nth-child(2) {
+    color: black;
+}
+
+main .topContentSec .todayStatus .filthyTable .todayWod {
+    color: black;
+}
+
 @media only screen and (min-width: 600px) {
 
     nav {
@@ -268,5 +332,10 @@ main aside .excerciseCard img {
         height: 60%;
         margin-left: auto;
         text-align: center;
+    }
+
+    main .todayStatus table tr:nth-child(2n) td:nth-child(2n),
+    main .todayStatus table tr:nth-child(2n) td:nth-child(2n+1) {
+        font-size: .8em;
     }
 }
