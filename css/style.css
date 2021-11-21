@@ -111,11 +111,14 @@ main aside ul li b:nth-child(2)::before {
     background-color: var(--myBlue);
 }
 
-main aside ul li img {
+main aside ul li img{
     width: 5vw;
     margin-left: auto;
     margin-right: auto;
-    filter: brightness(0) invert(1);
+}
+
+main aside ul li img:not(.dashboardIcon){
+filter: brightness(0) invert(1);
 }
 
 main aside ul li:first-child {
@@ -150,7 +153,7 @@ main aside .excerciseCard {
     border-radius: 20px;
     padding: 1rem;
     width: 70%;
-    height: 70%;
+    height: 30vh;
     display: none;
 }
 
@@ -159,9 +162,9 @@ main aside .excerciseCard i {
 }
 
 main aside .excerciseCard img {
-    width: 70%;
-    height: 70%;
-    margin: 2rem auto;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
 }
 
 main .mainContent {
@@ -196,6 +199,13 @@ main .mainContent {
 .counterChild {
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+}
+
+.counterChild svg:nth-child(2) {
+    position: absolute;
+    right: 69%;
+    top: 30%;
 }
 
 .counter table td {
@@ -209,10 +219,6 @@ main .mainContent {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-}
-
-.counter table tr td:nth-child(n+1) {
-    /* padding: 0 2.5rem; */
 }
 
 .counter table tr td:nth-child(n+2) {
@@ -240,6 +246,7 @@ main .todayStatus {
     margin-right: auto;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 3.36px 26.04px rgba(0, 0, 0, 0.1);
 }
 
 main .todayStatus table {
@@ -250,19 +257,6 @@ main .todayStatus table {
     margin-top: 1rem;
     margin-right: auto;
     margin-left: auto;
-}
-
-main .todayStatus table:nth-child(2) {
-    /* display: flex; */
-    /* margin-left: 0; */
-    /* margin-right: 0; */
-    /* background-color: brown; */
-}
-
-main .todayStatus table:nth-child(2) td:nth-child(3) {
-    /* background-color: aqua; */
-    /* margin-right: auto; */
-    /* margin-left: auto; */
 }
 
 main .todayStatus table td {
@@ -316,6 +310,7 @@ main .statisticsSec {
     padding: 1.5rem;
     border-radius: 20px;
     margin-top: 2rem;
+    box-shadow: 0px 3.36px 26.04px rgba(0, 0, 0, 0.1);
 }
 
 main .graphHeadings {
@@ -334,11 +329,14 @@ main .rightLeftGraphParts {
     display: flex;
 }
 
+main .statisticsSec .leftStatic {
+    margin-left: 1rem;
+}
+
 main .statisticsSec .leftStatic,
 .CircleGraphSec section {
     display: flex;
     flex-direction: column;
-    margin-left: 2rem;
 }
 
 main .statisticsSec .leftStatic section,
@@ -347,10 +345,11 @@ main .statisticsSec .leftStatic section,
     flex-direction: column;
     position: relative;
     padding: 1rem 0;
-    margin-left: 1.5rem;
 }
 
-.CircleGraphSec section {}
+.CircleGraphSec section {
+    position: relative;
+}
 
 main .statisticsSec .leftStatic section p,
 .CircleGraphSec section p {
@@ -369,14 +368,13 @@ main .statisticsSec .leftStatic section:before,
     border-radius: 200px;
 }
 
-/* .CircleGraphSec .leftCircleGraph section:before {
-    left: -30%;
-} */
-
 main .statisticsSec .leftStatic section:nth-child(3)::before,
-.CircleGraphSec section:nth-child(3):before
-{
+.CircleGraphSec section:nth-child(3):before {
     color: var(--myLigtPink);
+}
+
+.CircleGraphSec section {
+    margin-left: 1rem;
 }
 
 main .statisticsSec .leftStatic section:nth-child(2)::before,
@@ -390,6 +388,54 @@ main .statisticsSec .rightStatic,
     width: 100%;
     margin-left: auto;
     width: 100%;
+}
+
+.rightCircleGraph {
+    position: relative;
+}
+
+.circleGraphSideCard {
+    max-height: 3rem;
+    max-width: 6rem;
+    margin: 0;
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 3.36px 26.04px rgba(0, 0, 0, 0.1);
+    border-radius: 6.72px;
+    transform: rotate(-6.69deg);
+    display: flex;
+}
+
+.circleGraphSideCard h3 {
+    color: var(--myBlue);
+    font-weight: bold;
+    font-size: .6em;
+}
+
+.circleGraphSideCard h4 {
+    color: black;
+    font-size: .4em;
+}
+
+.circleGraphSideCard .graphBottomText {
+    max-width: 5rem;
+    max-height: 2rem;
+    padding: 0;
+    background-color: white;
+}
+
+.circleGraphSideCard p {
+    color: gray;
+    max-width: 6rem;
+    font-size: .3em;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+}
+
+.circleGraphSideCard svg {
+    max-width: 20px;
+    max-height: 20px;
 }
 
 main .statisticsSec .rightStatic svg,
@@ -408,8 +454,15 @@ main .statisticsSec .rightStatic svg,
     height: 60%;
 }
 
+.graphBottomText {
+    background-color: lightslategrey;
+    max-width: 2rem;
+    /* margin-right: auto; */
+}
+
 main .bottomContentSec {
     display: flex;
+    flex-direction: column;
 }
 
 main .CircleGraphContent {
@@ -427,6 +480,9 @@ main .CircleGraphSec {
     padding: 1.5rem;
     border-radius: 20px;
     margin-top: 2rem;
+    box-shadow: 0px 7.56px 47.88px rgba(0, 0, 0, 0.04);
+    border-radius: 25.2px;
+    transform: rotate(-6.69deg);
 }
 
 main .topPerformerSec {
@@ -439,7 +495,122 @@ main .topPerformerSec {
     padding: 1.5rem;
     border-radius: 20px;
     margin-top: 2rem;
+    height: 50vh;
+    box-shadow: 0px 3.36px 26.04px rgba(0, 0, 0, 0.1);
 }
+
+.topPerformerSec {
+    display: flex;
+    flex-direction: column;
+}
+
+.topCardPart {
+    display: flex;
+    flex-direction: row;
+}
+
+.topCardPart button {
+    margin-left: auto;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cards article {
+    width: 30%;
+    padding: 1rem;
+    border-radius: 19.32px;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 1em;
+    position: relative;
+}
+
+.topCardPart h4 {
+    font-weight: 600;
+    font-size: 16.8px;
+    line-height: 25.2px;
+}
+
+.topCardPart button {
+    width: 20%;
+    height: 3vh;
+    margin-bottom: 1rem;
+    border-radius: 8.4px;
+    font-weight: 500;
+    font-size: 11.76px;
+    line-height: 17.64px;
+    border: none;
+}
+
+.cards article h5,
+.cards article h6 {
+    font-weight: 700;
+    font-weight: 16.8px;
+    line-height: 25.2px;
+}
+
+.cards article h5 {
+    /* margin-top: .5rem; */
+}
+
+.cards article p {
+    font-weight: 500;
+    font-size: 10.08px;
+    line-height: 15.12px;
+}
+
+.cards article svg:nth-child(2n) {
+    margin-top: 1rem;
+}
+
+.cards article svg:nth-child(2n+1) {
+    transform: rotate(-6.69deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.cards article button {
+    width: 90%;
+    height: 18%;
+    border-radius: 10.92px;
+    border: none;
+    margin-top: auto;
+    font-size: .6em;
+}
+
+.cards article:nth-child(3) {
+    background-color: var(--myLigtPink);
+}
+
+.cards article:nth-child(3) button {
+    background-color: rgba(255, 255, 255, 0.53);
+}
+
+.cards article:nth-child(2) {
+    background-color: var(--myDarkPink);
+}
+
+.cards article:nth-child(2) button {
+    background-color: rgba(255, 255, 255, 0.53);
+}
+
+.cards article:nth-child(1) {
+    background-color: var(--myBlue);
+}
+
+.cards article:nth-child(1) button {
+    background-color: rgba(255, 255, 255, 0.53);
+}
+
+
 
 @media only screen and (min-width: 1024px) {
 
@@ -524,10 +695,6 @@ main .topPerformerSec {
         flex-direction: row;
     }
 
-    main .bottomContentSec {
-        flex-direction: row;
-    }
-
     main .CircleGraphSec {
         width: 34vw;
     }
@@ -543,5 +710,9 @@ main .topPerformerSec {
     .rightCircleGraph svg {
         width: 80%;
         height: 80%;
+    }
+
+    .topPerformerSec {
+        width: 34vw;
     }
 }
