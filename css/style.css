@@ -39,8 +39,8 @@ nav input[type=search] {
 }
 
 nav img {
-    width: 1.7rem;
-    height: 1.7rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 main {
@@ -219,21 +219,19 @@ main .mainContent {
     height: 100%;
     border-right: 2px solid #a3a3a3;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .counter table tr td:nth-child(n+2) {
     vertical-align: bottom;
     font-weight: bold;
-    color: var(--myDarkPink);
+    color: black;
     font-size: 3em;
     width: 50%;
 }
 
 #bottomText {
     vertical-align: top;
-    color: rgb(86, 175, 51);
+    color: gray;
     font-size: 2em;
     width: 50%;
 }
