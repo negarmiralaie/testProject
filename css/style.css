@@ -532,6 +532,7 @@ main .topPerformerSec {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height: 90%;
 }
 
 .cards article {
@@ -545,6 +546,8 @@ main .topPerformerSec {
     color: white;
     font-size: 1em;
     position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .topCardPart h4 {
