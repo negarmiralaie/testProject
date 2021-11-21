@@ -175,6 +175,8 @@ main .mainContent {
 .topContentSec {
     display: flex;
     flex-direction: column;
+    /* justify-content: space-around; */
+    /* align-items: center; */
 }
 
 .counter {
@@ -236,16 +238,23 @@ main .mainContent {
     width: 50%;
 }
 
+main .secondTopSec{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
 main .todayStatus {
     background-color: white;
     padding: 1.5rem;
     border-radius: 20px;
     width: 75vw;
+    min-height: 40vh;
     margin-top: 2rem;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     box-shadow: 0px 3.36px 26.04px rgba(0, 0, 0, 0.1);
 }
 
@@ -254,9 +263,7 @@ main .todayStatus table {
     border-collapse: separate;
     border-spacing: 2rem 0;
     text-align: center;
-    margin-top: 1rem;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
 }
 
 main .todayStatus table td {
@@ -305,8 +312,7 @@ main .statisticsSec {
     flex-direction: column;
     background-color: white;
     width: 75vw;
-    margin-left: auto;
-    margin-right: auto;
+    min-height: 40vh;
     padding: 1.5rem;
     border-radius: 20px;
     margin-top: 2rem;
@@ -327,6 +333,9 @@ main .graphHeadings h4 {
 
 main .rightLeftGraphParts {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
 }
 
 main .statisticsSec .leftStatic {
@@ -666,7 +675,7 @@ main .topPerformerSec {
     }
 
     main .todayStatus {
-        width: 34vw;
+        width: 37vw;
     }
 
     main .todayStatus table tr:nth-child(2n) td:nth-child(2n),
@@ -680,15 +689,16 @@ main .topPerformerSec {
     }
 
     main .statisticsSec {
-        width: 34vw;
+        width: 37vw;
     }
 
     main .rightLeftGraphParts {
         flex-direction: row;
     }
 
-    .secondTopSec {
+    main .secondTopSec {
         display: flex;
+        flex-direction: row;
     }
 
     main .bottomContentSec {
