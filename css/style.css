@@ -272,6 +272,7 @@ main .todayStatus table td {
     vertical-align: text-bottom;
     padding-right: .2rem;
     padding-left: .2rem;
+    width: 10%;
 }
 
 main .todayStatus table tr:nth-child(2n) td:nth-child(2n),
