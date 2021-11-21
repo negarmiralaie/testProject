@@ -637,8 +637,8 @@ main .topPerformerSec {
 
 @media only screen and (min-width: 992px) {
     main .bottomContentSec .circleGraphContent .rightCircleGraph #circleGraphSideCard {
-        right: -40%;
-        bottom: 18vh;
+        right: -45%;
+        bottom: 14vh;
     }
 }
 
@@ -651,7 +651,7 @@ main .topPerformerSec {
 @media only screen and (min-width: 1200px) {
     main .bottomContentSec .circleGraphContent .rightCircleGraph #circleGraphSideCard {
         right: -45%;
-        bottom: 28vh;
+        bottom: 18vh;
     }
 }
 
