@@ -334,13 +334,14 @@ main .graphHeadings h4 {
 
 main .rightLeftGraphParts {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* background-color: red; */
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 main .statisticsSec .leftStatic {
     margin-left: 1rem;
+    margin-right: auto;
 }
 
 main .statisticsSec .leftStatic,
