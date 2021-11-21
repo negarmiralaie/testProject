@@ -117,8 +117,8 @@ main aside ul li img{
     margin-right: auto;
 }
 
-main aside ul li img:not(.dashboardIcon){
-filter: brightness(0) invert(1);
+.activeAside{
+    color: var(--myBlue);
 }
 
 main aside ul li:first-child {
@@ -162,9 +162,9 @@ main aside .excerciseCard i {
 }
 
 main aside .excerciseCard img {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    margin: auto auto;
 }
 
 main .mainContent {
@@ -450,7 +450,7 @@ main .statisticsSec .rightStatic,
 }
 
 main .statisticsSec .rightStatic svg,
-.rightCircleGraph svg {
+.rightCircleGraph img {
     width: 100%;
     height: 100%;
 }
@@ -459,7 +459,7 @@ main .statisticsSec .rightStatic svg,
     margin-left: auto;
 }
 
-.rightCircleGraph svg {
+.rightCircleGraph img {
     margin: 0 0 auto auto;
     width: 60%;
     height: 60%;
@@ -577,11 +577,12 @@ main .topPerformerSec {
     line-height: 15.12px;
 }
 
-.cards article svg:nth-child(2n) {
+.cards article img:nth-child(2n) {
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-.cards article svg:nth-child(2n+1) {
+.cards article img:nth-child(2n+1) {
     transform: rotate(-6.69deg);
     position: absolute;
     top: 0;
@@ -621,9 +622,13 @@ main .topPerformerSec {
     background-color: rgba(255, 255, 255, 0.53);
 }
 
+@media only screen and (min-width: 1024px){
+    main aside .excerciseCard{
+        display: flex;
+    }
+}
 
-
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1420px) {
 
     nav {
         flex-direction: row;
@@ -639,10 +644,6 @@ main .topPerformerSec {
 
     nav img {
         margin-left: 1rem;
-    }
-
-    main aside .excerciseCard {
-        display: flex;
     }
 
     main aside ul li p,
