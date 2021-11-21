@@ -111,13 +111,13 @@ main aside ul li b:nth-child(2)::before {
     background-color: var(--myBlue);
 }
 
-main aside ul li img{
+main aside ul li img {
     width: 5vw;
     margin-left: auto;
     margin-right: auto;
 }
 
-.activeAside{
+.activeAside {
     color: var(--myBlue);
 }
 
@@ -238,7 +238,7 @@ main .mainContent {
     width: 50%;
 }
 
-main .secondTopSec{
+main .secondTopSec {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -410,6 +410,8 @@ main .statisticsSec .rightStatic,
     max-width: 6rem;
     margin: 0;
     position: absolute;
+    right: -30%;
+    bottom: 10vh;
     background: #FFFFFF;
     box-shadow: 0px 3.36px 26.04px rgba(0, 0, 0, 0.1);
     border-radius: 6.72px;
@@ -469,6 +471,10 @@ main .statisticsSec .rightStatic svg,
     background-color: lightslategrey;
     max-width: 2rem;
     /* margin-right: auto; */
+}
+
+.graphBottomText img {
+    max-width: 8px;
 }
 
 main .bottomContentSec {
@@ -622,9 +628,30 @@ main .topPerformerSec {
     background-color: rgba(255, 255, 255, 0.53);
 }
 
-@media only screen and (min-width: 1024px){
-    main aside .excerciseCard{
+@media only screen and (min-width: 768px){
+    main .bottomContentSec .circleGraphContent .rightCircleGraph #circleGraphSideCard{
+        right: -40%;
+        bottom: 18vh;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    main .bottomContentSec .circleGraphContent .rightCircleGraph #circleGraphSideCard {
+        right: -40%;
+        bottom: 18vh;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    main aside .excerciseCard {
         display: flex;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    main .bottomContentSec .circleGraphContent .rightCircleGraph #circleGraphSideCard {
+        right: -45%;
+        bottom: 28vh;
     }
 }
 
@@ -716,11 +743,13 @@ main .topPerformerSec {
         width: 34vw;
     }
 
-    main .rightCircleGraph {
-        /* width: 50%; */
+    main .bottomContentSec .circleGraphContent .rightCircleGraph #circleGraphSideCard {
+        right: -25%;
+        bottom: 14vh;
+        max-width: 100px;
     }
 
-    .rightCircleGraph svg {
+    .rightCircleGraph img {
         width: 80%;
         height: 80%;
     }
